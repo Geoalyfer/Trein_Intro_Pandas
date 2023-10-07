@@ -1,0 +1,43 @@
+Apresentando o Pandas
+
+- Biblioteca mais popular para tratamento e análise de dados
+- consegue trabalhar facilmente com vários formatos de arquivos (CSV, JSON, XLSX....)
+- vamos trabalhar MUITO com a biblioteca Pandas ao longo da nossa Formação!
+
+  import pandas as pd
+
+Método read_csv()
+
+- Lê arquivos no formato CSV 
+- Coloca os dados em um formato tabular chamadado DataFrame
+
+arquivo = pd.read_csv('dados.csv', delimiter=';', names=['nome', 'idade'])
+
+arquivo
+
+nome	idade
+0	josé	30
+1	gabriel	25
+2	lucas	15
+3	ana	45
+4	maria	60
+5	victor	70
+
+Método read_json()
+
+- Lê arquivos no formato JSON 
+- Coloca os dados em um formato tabular chamadado DataFrame
+
+arquivo = pd.read_json('dados.json')
+
+arquivo
+
+	nome	idade
+0	José	25
+1	Maria	19
+2	Gabriel	21
+3	Lucas	16
+
+Salvando um arquivo com o Pandas
+
+arquivo.to_csv('dados_json_em_csv.csv', index=False)
